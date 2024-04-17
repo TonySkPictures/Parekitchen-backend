@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sumbit_forms",
+  "info": {
+    "singularName": "sumbit-form",
+    "pluralName": "sumbit-forms",
+    "displayName": "SumbitForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "configId": {
+      "type": "string"
+    },
+    "agreement": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Processing",
+        "Completed"
+      ]
+    }
+  }
+}

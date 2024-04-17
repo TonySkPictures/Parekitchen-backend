@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_module_options_counter_tops",
+  "info": {
+    "displayName": "counterTops",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Color": {
+      "type": "enumeration",
+      "enum": [
+        "Keramik Calacatta Schwarz",
+        "Keramik Calacatta Gold Matt",
+        "Keramik Eternal Gold Matt",
+        "Keramik Ivory Cement",
+        "Keramik Marble Gray Matt",
+        "Keramik Marble Laurant Matt",
+        "Keramik Marble Marquina Matt",
+        "Keramik Metal Burnished Matt",
+        "Naturstein Granit Nero Assoluto",
+        "Naturstein Granit Nero Assoluti PEC"
+      ]
+    },
+    "render": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "topView": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

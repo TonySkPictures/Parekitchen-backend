@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_config_item_config_items",
+  "info": {
+    "displayName": "configItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "module": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::module.module"
+    },
+    "hasCounterTop": {
+      "type": "boolean",
+      "default": false
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}

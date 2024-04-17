@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colors",
+  "info": {
+    "singularName": "color",
+    "pluralName": "colors",
+    "displayName": "Color",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "colorName": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Module",
+        "Top"
+      ]
+    },
+    "colorOrder": {
+      "type": "integer",
+      "unique": true
+    },
+    "slug": {
+      "type": "string"
+    },
+    "colorNameDE": {
+      "type": "string"
+    }
+  }
+}

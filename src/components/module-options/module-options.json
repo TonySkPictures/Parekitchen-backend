@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_module_options_module_options",
+  "info": {
+    "displayName": "moduleOptions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "render": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "topView": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Anthrazit-Metallic",
+        "Verkehrsweiß",
+        "Tiefschwarz",
+        "Eisenglimmer",
+        "Crystal Lounge",
+        "Timber Essence",
+        "Cream Fawn",
+        "Blue Tan",
+        "Pure Essence Beige",
+        "Spiritual Harmony"
+      ]
+    }
+  }
+}

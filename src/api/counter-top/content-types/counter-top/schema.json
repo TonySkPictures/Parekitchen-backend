@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "counter_tops",
+  "info": {
+    "singularName": "counter-top",
+    "pluralName": "counter-tops",
+    "displayName": "CounterTop",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "module-options.counter-tops"
+    },
+    "titleDE": {
+      "type": "string"
+    },
+    "descriptionDE": {
+      "type": "text"
+    }
+  }
+}
