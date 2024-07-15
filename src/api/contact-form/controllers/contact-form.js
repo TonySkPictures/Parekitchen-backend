@@ -56,11 +56,7 @@ module.exports = {
                <p><strong>Postal Code:</strong> ${postalCode}</p>
                <p><strong>Country:</strong> ${country}</p>
                <p><strong>Configuration Code:</strong> ${configId}</p>
-               `,
-        attachments: [{
-          filename: `Configuration #${configId}.png`,
-          path: `${screenshot}`
-        }]
+               `
       };
       await transporter.sendMail(emailMessage);
 
