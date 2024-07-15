@@ -8,6 +8,11 @@ module.exports = {
         name,
         surname,
         email,
+        phone,
+        street,
+        postalCode,
+        city,
+        country,
         configId,
         screenshot
 
@@ -22,11 +27,6 @@ module.exports = {
       });
 
 
-      // let emailText =
-      //   `Full Name: ${name} ${surname}\n` +
-      //   `Email: ${email}\n`;
-
-
 
       const emailMessage = {
         from: 'hello@pare-kitchen.info',
@@ -39,12 +39,32 @@ module.exports = {
          call up your configuration at any time using your code.<br/><br/>Thank you very much.<br/>Yours sincerely,<br/>
          PARE-Kitchen Team.</p>`,
         attachments: [{
-          filename: `Configuration ${configId}.png`,
+          filename: `Configuration #${configId}.png`,
           path: `${screenshot}`
         }]
       };
-      console.log(emailMessage);
+      const otherEmailMessage = {
+        from: 'hello@pare-kitchen.info',
+        to: 'hello@pare-kitchen.info, selmin@origin3agency.com',
+        subject: `Configuration Submission #${configId}`,
+        html: `<p>New configuration submission received:</p>
+               <p><strong>Name:</strong> ${name} ${surname}</p>
+               <p><strong>Email:</strong> ${email}</p>
+               <p><strong>Phone:</strong> ${phone}</p>
+               <p><strong>Street:</strong> ${street}</p>
+               <p><strong>City:</strong> ${city}</p>
+               <p><strong>Postal Code:</strong> ${postalCode}</p>
+               <p><strong>Country:</strong> ${country}</p>
+               <p><strong>Configuration Code:</strong> ${configId}</p>
+               `,
+        attachments: [{
+          filename: `Configuration #${configId}.png`,
+          path: `${screenshot}`
+        }]
+      };
       await transporter.sendMail(emailMessage);
+
+      await transporter.sendMail(otherEmailMessage);
       ctx.send({ message: `Email sent successfully! Sent to ${emailMessage.to}` });
     } catch (error) {
       ctx.send({ error: 'Failed to send email', details: error });
