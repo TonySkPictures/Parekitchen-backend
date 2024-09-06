@@ -45,7 +45,7 @@ module.exports = {
       };
       const otherEmailMessage = {
         from: 'hello@pare-kitchen.info',
-        to: 'p.mueller@franzmueller-pruem.de',
+        to: 'p.mueller@franzmueller-pruem.de, selminlekovic@gmail.com',
         subject: `Configuration Submission #${configId}`,
         html: `<p>New configuration submission received:</p>
                <p><strong>Name:</strong> ${name} ${surname}</p>
@@ -58,9 +58,10 @@ module.exports = {
                <p><strong>Configuration Code:</strong> ${configId}</p>
                `
       };
+      await transporter.sendMail(otherEmailMessage);
       await transporter.sendMail(emailMessage);
 
-      await transporter.sendMail(otherEmailMessage);
+      
       ctx.send({ message: `Email sent successfully! Sent to ${emailMessage.to}` });
     } catch (error) {
       ctx.send({ error: 'Failed to send email', details: error });
