@@ -45,7 +45,7 @@ module.exports = {
       };
       const otherEmailMessage = {
         from: 'hello@pare-kitchen.info',
-        to: 'p.mueller@franzmueller-pruem.de, selminlekovic@gmail.com',
+        to: 'p.mueller@franzmueller-pruem.de',
         subject: `Configuration Submission #${configId}`,
         html: `<p>New configuration submission received:</p>
                <p><strong>Name:</strong> ${name} ${surname}</p>
